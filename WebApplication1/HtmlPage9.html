@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        #container {
+            display: -moz-box;
+            -moz-box-orient: horizontal;
+            /*width: 800px;*/
+            margin: 0px auto;
+            /*-moz-box-flex:1;*/
+        }
+
+        #left-sidebar {
+            width: 220px;
+            box-sizing: border-box;
+            border: 1px solid Gray;
+            -moz-box-ordinal-group: 3;
+            /*-moz-box-flex:1;*/
+        }
+
+        #contents {
+            /*width: 500px;*/
+            /*-moz-box-flex:1;*/
+            box-sizing: border-box;
+            border: 1px dotted Green;
+            -moz-box-ordinal-group: 1;
+            -moz-box-flex: 1;
+        }
+
+        #right-sidebar {
+            /*width: 100px;*/
+            box-sizing: border-box;
+            border: 1px dashed Red;
+            -moz-box-ordinal-group: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="left-sidebar">
+            <ul>
+                <li>文章1</li>
+                <li>文章1</li>
+                <li>文章1</li>
+                <li>文章1</li>
+                <li>文章1</li>
+                <li>文章1</li>
+            </ul>
+        </div>
+        <div id="contents">
+            <p>文章1的内容：是文章一!</p>
+        </div>
+        <div id="right-sidebar">
+            <p>
+                评论列表：
+                这篇文章写得不错!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        #transform {
+            width: 200px;
+            border: 2px solid Gray;
+            /*transform: rotate(-30deg);*/
+            /*-moz-transform: scale(1.5,0.5);
+            -webkit-transform: scale(1.5,0.5);
+            -o-transform: scale(1.5,0.5);*/
+            height: 300px;
+            text-align: center;
+            /*-moz-transform:skew(10deg);*/
+            /*-moz-transform:translate(90px,100px);*/
+            /*-moz-transform:translate(150px,200px) rotate(45deg) scale(1.5);*/
+            /*-moz-transform: rotate(45deg) scale(1.5) translate(150px,200px);
+            -webkit-transform: rotate(45deg) scale(1.5) translate(150px,200px);
+            -o-transform: rotate(45deg) scale() translate(150px,200px);*/
+            -moz-transform: rotate(45deg);
+            -moz-transform-origin: left bottom;
+        }
+
+        #container {
+            width: 800px;
+            margin: 0px auto;
+            -moz-transition: background-color linear 0.5s;
+        }
+
+            #container:hover {
+                /*background-color: Green;*/
+            }
+
+        input[type=button] {
+            /*-moz-transition:background-color linear 0.4s;*/
+            /*-moz-transition-property:background-color;
+            -moz-transition-duration:0.4s;
+            -moz-transition-timing-function:ease;*/
+            border-radius: 3px;
+            border: none;
+            padding: 6px 10px;
+            font-weight: bolder;
+            background-color: #7cd794;
+            color: white;
+            -moz-transform: rotate(0deg) translate(0px,0px);
+            -moz-transition: -moz-transform linear 1s,color linear 1s,background-color linear 1s;
+        }
+
+            input[type=button]:hover {
+                background-color: green;
+                color: Red;
+                -moz-transform: rotate(45deg) translate(100px,100px);
+            }
+
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            -moz-transition: background-color linear 3s,width linear 2s,height linear 2s,-moz-transform linear 2s;
+            -moz-transform: translate(0);
+        }
+
+            #div1:hover {
+                width: 400px;
+                height: 400px;
+                background-color: red;
+                -moz-transform: translate(100px);
+            }
+
+        #div2 {
+            width: 200px;
+            height: 100px;
+            border: 1px solid Green;
+            -moz-transform: translate(0px);
+            -moz-transition: -moz-transform linear 0.2s;
+        }
+
+            #div2:hover {
+                -moz-transform: translate(100px);
+            }
+
+        img:nth-last-of-type(1) {
+            -moz-transition: -moz-transform linear 0.3s;
+            -moz-transform: rotate(0deg);
+        }
+
+            img:nth-last-of-type(1):hover {
+                -moz-transform: rotate(90deg);
+            }
+
+        @-moz-keyframes my {
+            0% {
+                /*background-color: red;*/
+                opacity:0;
+            }
+
+            40% {
+                /*background-color: darkblue;*/
+                opacity:0.5;
+            }
+
+            70% {
+                /*background-color: yellow;*/
+                opacity:1;
+            }
+
+            90% {
+                /*background-color: green;*/
+                opacity:0.3;
+            }
+
+            100% {
+                /*background-color: red;*/
+                opacity:0;
+            }
+        }
+
+        #div3 {
+            width: 100px;
+            height: 100px;
+            border:2px solid Green;
+            background-color:red;
+            opacity:0;
+        }
+
+            #div3:hover {
+                -moz-animation-name: my;
+                -moz-animation-timing-function: linear;
+                -moz-animation-duration: 3s;
+            }
+    </style>
+</head>
+<body>
+    <input type="button" value="登录" />
+    <div id="container">
+
+        <div style="height:200px;border:6px solid White;-moz-border-image:url(/bizhi0323.jpg) 10 18 18 18/18px;">
+
+        </div>
+
+        <div id="transform">
+            文章内容
+        </div>
+
+        <div id="div1"></div>
+        <div id="div2"></div>
+
+        <div>
+            <img src="/bizhi0323.jpg" />
+        </div>
+
+        <div id="div3"></div>
+    </div>
+</body>
+</html>

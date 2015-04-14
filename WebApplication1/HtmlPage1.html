@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="Scripts/MyJs.js"></script>
+    <style type="text/css">
+        ul {
+            list-style-type: none;
+        }
+
+            ul li {
+                line-height: 30px;
+            }
+
+        #div1 ul li:nth-child(2) {
+            background-color: red;
+            color: white;
+        }
+
+        #div1 li:nth-last-child(1) {
+            color: green;
+            font-weight: bolder;
+        }
+
+        /*#div1 ul li:not(:nth-child(2)) {
+            background-color:purple;
+            color:white;
+        }*/
+
+        #div1 ul li:nth-child(2n+1) {
+            background-color: pink;
+            color: White;
+        }
+
+        #div1 ul li:nth-child(2n) {
+            background-color: yellow;
+            color: green;
+        }
+
+        body div:first-child {
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed green;
+        }
+
+        #div1 ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #div2 ul li:last-child {
+            list-style-type: circle;
+        }
+
+        #div2 ul li:first-child {
+            list-style-type: square;
+        }
+
+        #div2 ul li:nth-child(2) {
+            list-style-type: initial;
+        }
+
+        div:first-child {
+            font-size: 12px;
+        }
+
+
+        /*:nth-last-child(even) {
+            background-color: blue;
+        }*/
+        #studentList {
+            font-size: 12px;
+            width: 100%;
+            text-align: center;
+        }
+
+            #studentList tr:nth-child(even) {
+                background-color: #E0E0E0;
+                color: green;
+            }
+
+            #studentList tr:nth-child(odd):not(:first-child) {
+                background-color: #e1f6ad;
+                color: orange;
+            }
+
+            #studentList tr:first-child {
+                background-color: #de5900;
+                color: white;
+            }
+
+            #studentList td, #studentList th {
+                padding: 20px;
+            }
+
+        /*#articles h1:nth-child(2n+1) {
+            background-color: yellow;
+        }
+
+        #articles h1:nth-child(2n) {
+            background-color: skyblue;
+        }*/
+
+        #articles h1:nth-of-type(odd) {
+            background-color: yellow;
+        }
+
+        #articles h1:nth-of-type(2n) {
+            background-color: skyblue;
+        }
+
+
+
+        #ulDiv li:nth-child(4n+1) {
+            background-color: green;
+        }
+
+        #ulDiv li:nth-child(4n+2) {
+            background-color: #f7b4f7;
+        }
+
+        #ulDiv li:nth-child(4n+3) {
+            background-color: rgba(234, 48, 48, 0.50);
+        }
+
+        #ulDiv li:nth-child(4n+4) {
+            background-color: orange;
+        }
+
+        /*li:nth-child(1):nth-last-child(1) {
+            background-color: black;
+            color: white;
+        }*/
+
+        li:only-child {
+            background-color: black;
+            color: white;
+        }
+
+        img:hover {
+           
+            transform: scale(0.5);
+        }
+        /*:hover
+        {
+            border:1px dotted Red;
+        }*/
+        table tr:focus {
+            background-color: green;
+        }
+
+        h1 ~ p {
+            background-color: gray;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="/favico.ico" />
+    <a href="#">我是a标签</a>
+    <ul>
+        <li>我是无需列表，我只有一项列表项</li>
+    </ul>
+    <!--<canvas id="canvas" width="1000" height="500"></canvas>-->
+    <div id="div1">
+        <ul>
+            <li>
+                C#
+            </li>
+            <li>
+                MVC
+            </li>
+            <li>
+                JavaScript
+            </li>
+            <li>
+                HTML5
+            </li>
+        </ul>
+    </div>
+
+    <div id="div2">
+        我是div2
+        <ul>
+            <li>html5</li>
+            <li>android</li>
+            <li>ios</li>
+        </ul>
+    </div>
+    <div id="div3">
+        我是div3
+    </div>
+    <div id="div4">
+        我是div4
+    </div>
+
+    <table id="studentList">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>3138114239</td>
+            <td>陈新</td>
+            <td>男</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>3138114240</td>
+            <td>小里</td>
+            <td>男</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <td>3138114241</td>
+            <td>小花</td>
+            <td>女</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>3138114242</td>
+            <td>小兰</td>
+            <td>女</td>
+            <td>24</td>
+        </tr>
+    </table>
+
+    <div id="articles">
+        <h1>文章1-标题</h1>
+        <p>文章1-内容</p>
+        <h1>文章2-标题</h1>
+        <p>文章2-内容</p>
+        <h1>文章3-标题</h1>
+        <p>文章3-内容</p>
+        <h1>文章4-标题</h1>
+        <p>文章4-内容</p>
+    </div>
+
+    <div id="ulDiv">
+        <ul>
+            <li>列表项目1</li>
+            <li>列表项目2</li>
+            <li>列表项目3</li>
+            <li>列表项目4</li>
+            <li>列表项目5</li>
+            <li>列表项目6</li>
+            <li>列表项目7</li>
+            <li>列表项目8</li>
+            <li>列表项目9</li>
+            <li>列表项目10</li>
+            <li>列表项目11</li>
+            <li>列表项目12</li>
+        </ul>
+    </div>
+</body>
+</html>

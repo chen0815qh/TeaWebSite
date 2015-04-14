@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        var i = 0;
+        window.onload = function () {
+            chk.addEventListener("change", function () {
+                if (!this.checked) {
+                    txt.disabled = "disabled";
+                    i = 10;
+                }
+                else {
+                    txt.removeAttribute("disabled");
+                    
+                }
+            }, false);
+        };
+    </script>
+    <style type="text/css">
+        input[type=text]:hover {
+            border: 1px solid #CCC;
+            padding: 6px;
+            /*box-shadow: Gray 3px 3px 2px;*/
+            border-radius: 4px;
+            /*background-color: #ebebeb;*/
+        }
+
+        input[type=text]:active {
+            background-color: green;
+        }
+
+        input[type=text]:focus {
+            /*background-color:red;*/
+        }
+
+        input[type=text]:enabled {
+            background-color: white;
+        }
+
+        input[type=text]:disabled {
+            background-color: Gray;
+        }
+
+        input:read-write {
+            background-color: white;
+        }
+
+        input:read-only {
+            background-color: Gray;
+        }
+
+        input[type=checkbox]:checked {
+            outline: 2px solid Red;
+        }
+
+        :default {
+            outline: 2px solid Green;
+        }
+
+        p::-moz-selection {
+            background-color: #f5f2c8;
+        }
+
+        h2:before {
+            content: "Column:";
+            color: red;
+            font-size: 12px;
+            padding: 10px;
+            background-color: green;
+        }
+
+        h2.bg {
+            color: red;
+        }
+
+            h2.bg:before {
+                content: none;
+            }
+
+        h2:before {
+            content: url(/favicon.ico);
+        }
+
+        img:after {
+            content: attr("alt");
+        }
+
+        #articles h1:before {
+            content: "第"counter(mycount,upper-alpha)"章 ";
+            color: red;
+        }
+
+        #articles h1 {
+            counter-increment: mycount;
+        }
+
+        #div3 h2:before {
+            content: counter(count1);
+            color: red;
+            background-color: White;
+            font-size: 30px;
+        }
+
+        #div3 h2 {
+            counter-increment: count1;
+        }
+
+        #div3 h3:before {
+            content: counter(count1)"."counter(count2)" ";
+        }
+
+        #div3 h3 {
+            counter-increment: count2;
+            margin-left: 20px;
+        }
+
+        #div3 h4:before {
+            content: counter(count1)"."counter(count2)"."counter(count3)" ";
+        }
+
+        #div3 h4 {
+            counter-increment: count3;
+            margin-left: 60px;
+        }
+
+        #myH1:before {
+            content: open-quote;
+        }
+
+        #myH1:after {
+            content: close-quote;
+        }
+
+        #myH1 {
+            quotes: "(" ")";
+        }
+    </style>
+</head>
+<body>
+    <input type="date" />
+    <h1 id="myH1">我自己的h1</h1>
+    <h2 class="bg">我是H2</h2>
+    <h2>我是前面有文字的h2</h2>
+    <input type="checkbox" id="chk" /><input type="text" id="txt" />
+
+    用户名：<input type="text" />
+    <br />
+    密码：<input type="text" readonly="readonly" />
+    <input type="checkbox" checked />
+
+    <p class="bg">我是文章内容。请选中我看看!</p>
+    <img src="/" alt="蓝天白云" />
+
+    <div id="articles">
+        <h1>文章1-标题</h1>
+        <p>文章1-内容</p>
+        <h1>文章2-标题</h1>
+        <p>文章2-内容</p>
+        <h1>文章3-标题</h1>
+        <p>文章3-内容</p>
+        <h1>文章4-标题</h1>
+        <p>文章4-内容</p>
+    </div>
+
+    <div id="div3">
+        <h2>编程语言</h2>
+        <h3>C#</h3>
+        <h3>Java</h3>
+        <h3>Python</h3>
+        <h2>前端语言</h2>
+        <h3>JavaScript</h3>
+        <h3>HTML</h3>
+        <h4>HTML5</h4>
+        <h4>HTML4</h4>
+    </div>
+</body>
+</html>

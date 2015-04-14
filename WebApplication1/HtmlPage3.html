@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        #divA, #divB {
+            width: 200px;
+            float: left;
+            border: 1px solid #E0E0E0;
+            display: inline-block;
+            display: block;
+            word-wrap: break-word;
+            vertical-align: bottom;
+        }
+
+        #container {
+            /*width:405px;
+            margin:0px auto;*/
+        }
+
+        #divC {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="divA">
+            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        </div>
+        <div id="divB">BBBBBBBBBBBBBBBBBBBB</div>
+        <!--<div style="clear:both;"></div>-->
+        <div id="divC">CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</div>
+
+        文章一
+        <table style="display:inline-table;vertical-align:bottom;"><tr><td>文章二</td></tr></table>
+        文章三
+
+        <div style="display:list-item;list-style-type:square;">
+            我是div,但是我能做到和显示li一样的效果。
+        </div>
+
+        <div style="width:100px;border:1px solid Gray;overflow-x:hidden;white-space:nowrap; text-overflow:ellipsis;">
+            我是一个非常长非常长非常长非常长非常长非常长非常长非常长非常长非常长非常长非常长非常长非常长的句子。
+        </div>
+
+        <div id="" style="width:300px;height:200px;border:1px solid Gray;box-shadow:Gray 2px 2px 20px">
+        </div>
+
+        <input type="text" style="box-shadow:Gray 2px 2px 20px;border:1px solid Gray;border-radius:6px;background-color:rgba(203, 203, 203, 0.21);height:30px;line-height:30px;margin-top:100px;" />
+    </div>
+</body>
+</html>
